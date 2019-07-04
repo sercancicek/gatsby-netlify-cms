@@ -15,7 +15,7 @@ collections:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
-    - name: "pages"
+  - name: "pages"
     label: "Pages"
     files:
       - file: "src/pages/home/index.md"
