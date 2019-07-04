@@ -14,19 +14,22 @@ const BlogPage = () => {
                             title
                             date
                         }
+                        fields {
+                        slug
+                      }
                     }
                 }
             }
         }
     `)
-console.log({aaa: data.allMarkdownRemark.edges});
+    console.log({ aaa: data.allMarkdownRemark.edges });
     return (
         <Layout>
             <h1>Blog</h1>
             <ol className={blogStyles.posts}>
-                {data.allMarkdownRemark.edges.map((edge) => {
+                {data.allMarkdownRemark.edges.map((edge, i) => {
                     return (
-                        <li className={blogStyles.post}>
+                        <li key={i} className={blogStyles.post}>
                             <Link to={`/blog/${edge.node.fields.slug}`}>
                                 <h2>{edge.node.frontmatter.title}</h2>
                                 <p>{edge.node.frontmatter.date}</p>
