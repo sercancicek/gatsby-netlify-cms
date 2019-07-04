@@ -15,11 +15,13 @@ collections:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
-  - name: home
-    label: Home
-    folder: src/pages/home/data
-    create: true
-    fields:
-      - { name: title, label: Title }
-      - { name: bio, label: Bio }
-      - { name: detail, label: detail }
+    - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { name: title, label: Title }
+          - { name: bio, label: Bio }
+          - { name: detail, label: detail }

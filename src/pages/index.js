@@ -1,9 +1,28 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
 
+
 const IndexPage = () => {
+const data = useStaticQuery(graphql`
+        query {
+            allMarkdownRemark {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            date
+                        }
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }
+        }
+    `)
+    console.log({ xx: data.allMarkdownRemark });
     return (
         <Layout>
             <h1>Hello.</h1>
