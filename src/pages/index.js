@@ -14,9 +14,6 @@ const data = useStaticQuery(graphql`
                             title
                             date
                         }
-                        fields {
-                            slug
-                        }
                     }
                 }
             }
