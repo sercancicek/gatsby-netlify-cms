@@ -17,6 +17,8 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: "pages"
     label: "Pages"
+    editor:
+      preview: true
     files:
       - file: "src/pages/index.md"
         label: "Home"

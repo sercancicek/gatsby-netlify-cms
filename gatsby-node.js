@@ -5,7 +5,13 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
     if (node.internal.type === 'MarkdownRemark') {
         const slug = path.basename(node.fileAbsolutePath, '.md')
-        
+        if (
+            // home page gets root slug
+            parsedFilePath.name === 'home' &&
+            parsedFilePath.dir === 'pages'
+          ) {
+            slug = `/`
+          }
         createNodeField({
             node,
             name: 'slug',

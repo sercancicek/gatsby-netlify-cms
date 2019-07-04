@@ -2,6 +2,6 @@
 templateKey: home-page
 title: Sercan Cicek
 bio: Full-stack dev
-title: Sercan Cicek
+detail: Serca1231n Cicek
 ---
 
