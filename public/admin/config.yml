@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: sercancicek/gatsby-netlify-cms
 
 media_folder: static/assets
 public_folder: assets
@@ -7,10 +8,18 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/posts
     create: true
     fields:
       - { name: title, label: Title }
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
+  - name: home
+    label: Home
+    folder: src/pages/home/data
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: bio, label: Bio }
+      - { name: detail, label: detail }
