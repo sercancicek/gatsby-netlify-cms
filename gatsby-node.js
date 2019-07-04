@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports.onCreateNode = ({ node, actions }) => {
+module.exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
