@@ -3,13 +3,13 @@ const path = require('path')
 module.exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
     const fileNode = getNode(node.parent)
-    const parsedFilePath = path.parse(fileNode.relativePath)
+    const parsedFilePath = fileNode && path.parse(fileNode.relativePath)
 
     if (node.internal.type === 'MarkdownRemark') {
         const slug = path.basename(node.fileAbsolutePath, '.md')
         if (
             // home page gets root slug
-            parsedFilePath.name === 'home' &&
+            parsedFilePath && parsedFilePath.name === 'home' &&
             parsedFilePath.dir === 'pages'
           ) {
             slug = `/`
