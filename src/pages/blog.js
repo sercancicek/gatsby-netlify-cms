@@ -19,7 +19,7 @@ const BlogPage = () => {
             }
         }
     `)
-
+console.log({aaa: data.allMarkdownRemark.edges});
     return (
         <Layout>
             <h1>Blog</h1>
