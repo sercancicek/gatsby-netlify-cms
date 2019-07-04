@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions
+    const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
 
     if (node.internal.type === 'MarkdownRemark') {
