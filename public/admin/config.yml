@@ -22,6 +22,7 @@ collections:
         label: "Home"
         name: "home"
         fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page" }
           - { name: title, label: Title }
           - { name: bio, label: Bio }
           - { name: detail, label: detail }
