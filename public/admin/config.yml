@@ -9,6 +9,7 @@ collections:
   - name: blog
     label: Blog
     folder: src/posts
+    slug: '{{slug}}'
     create: true
     fields:
       - { name: title, label: Title }
@@ -23,6 +24,7 @@ collections:
       - file: "src/pages/index.md"
         label: "Home"
         name: "home"
+        slug: '{{slug}}'
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page" }
           - { name: title, label: Title }
