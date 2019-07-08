@@ -5,20 +5,6 @@ import Layout from '../components/layout'
 
 
 const IndexPage = () => {
-const data = useStaticQuery(graphql`
-        query {
-            allMarkdownRemark {
-                edges {
-                    node {
-                        frontmatter {
-                            title
-                            date
-                        }
-                    }
-                }
-            }
-        }
-    `)
     console.log({ xx: data.allMarkdownRemark });
     return (
         <Layout>

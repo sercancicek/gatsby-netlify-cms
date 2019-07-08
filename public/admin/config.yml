@@ -30,3 +30,9 @@ collections:
           - { name: title, label: Title }
           - { name: bio, label: Bio }
           - { name: detail, label: detail }
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: HomePage,
+            }
