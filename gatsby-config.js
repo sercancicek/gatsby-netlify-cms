@@ -1,7 +1,8 @@
 module.exports = {
     siteMetadata: {
         title: 'Full-Stack Bootcamp',
-        author: 'Andrew Mead'
+        author: 'Andrew Mead',
+        siteUrl: 'https://inspiring-goldstine-3c29e5.netlify.com'
     },
     plugins: [
         `gatsby-plugin-netlify-cms`,
@@ -13,7 +14,14 @@ module.exports = {
                 path: `${__dirname}/src/`
             }
         },
-        'gatsby-plugin-sharp',
+        {
+            resolve: 'gatsby-plugin-netlify-cms',
+            options: {
+                modulePath: `${__dirname}/src/cms/cms.js`,
+                stylesPath: `${__dirname}/src/cms/admin.css`,
+                enableIdentityWidget: true
+            }
+        },
         {
             resolve: 'gatsby-transformer-remark',
             options: {
@@ -28,6 +36,6 @@ module.exports = {
                     }
                 ]
             }
-        }
+        },
     ]
 }
