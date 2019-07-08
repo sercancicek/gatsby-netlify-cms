@@ -14,6 +14,7 @@ module.exports = {
                 path: `${__dirname}/src/`
             }
         },
+        'gatsby-plugin-sitemap',
         {
             resolve: 'gatsby-plugin-netlify-cms',
             options: {
@@ -22,6 +23,7 @@ module.exports = {
                 enableIdentityWidget: true
             }
         },
+        'gatsby-plugin-sharp',
         {
             resolve: 'gatsby-transformer-remark',
             options: {
@@ -37,5 +39,6 @@ module.exports = {
                 ]
             }
         },
+        'gatsby-plugin-netlify'
     ]
 }
