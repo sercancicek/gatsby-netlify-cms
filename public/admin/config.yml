@@ -16,23 +16,13 @@ collections:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
-  - name: "pages"
-    label: "Pages"
-    editor:
-      preview: true
+  - label: "Pages"
+    name: "pages"
     files:
-      - file: "src/pages/index.md"
-        label: "Home"
+      - label: "Home Page"
         name: "home"
-        slug: '{{slug}}'
+        file: "src/homeMD/home.md"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page" }
-          - { name: title, label: Title }
-          - { name: bio, label: Bio }
-          - { name: detail, label: detail }
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: HomePage,
-            }
+          - {label: Title, name: h1, widget: string}
+          - {label: Sub Title, name: h2, widget: string}
+          - {label: Paragraph, name: p, widget: string}

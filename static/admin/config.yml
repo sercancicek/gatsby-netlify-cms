@@ -16,3 +16,13 @@ collections:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/homeMD/home.md"
+        fields:
+          - {label: Title, name: h1, widget: string}
+          - {label: Sub Title, name: h2, widget: string}
+          - {label: Paragraph, name: p, widget: string}
